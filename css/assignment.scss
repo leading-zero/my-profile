@@ -1,0 +1,302 @@
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(../images/thegrid.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  -webkit-backface-visibility: hidden;
+  font-family: "Helvetica Neue", sans-serif;
+  height: auto;
+  min-height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: auto;
+}
+
+.bumper {
+  margin-top: 100px;
+  padding-bottom: 1em;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.0);
+  border: 0;
+  margin: auto;
+}
+
+.dud {
+  color: #ffffff;
+}
+
+.feather {
+  margin: 0 8px;
+}
+
+.foot-txt {
+  //font-size: 48px;
+  margin: 0 auto;
+}
+
+.gh-link {
+  color: rgb(131, 131, 136);
+  transition: .3s ease-out;
+}
+
+h1 {
+  color: #fff;
+  font-family: Courier, Monospace, sans-serif, sans-serif;
+  font-size: 48px;
+  font-weight: 100;
+  text-align: center;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  // padding: 0 80px;
+  text-align: left;
+  z-index: 10;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.height-calc {
+  height: calc(100%);
+}
+
+img {
+  alignment: left;
+  border-radius: 10px;
+}
+
+.mugshot {
+  border-radius: 50%;
+  height: 200px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+p {
+  //padding: 0 80px;
+  text-align: left;
+}
+
+.tag-wrap {
+  word-break: break-all;
+}
+
+.pi-icon {
+  margin: 0;
+}
+
+//removes text artifacts
+.scramble-container {
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+}
+
+.section {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+
+// SCROLLBAR STYLES
+
+::-webkit-scrollbar-track {
+  //-webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 1);
+  border: 0;
+  border-radius: 5px;
+}
+
+// Fade In
+
+.fade-in {
+  animation: fadeIn ease 20s;
+  -webkit-animation: fadeIn ease 20s;
+  -moz-animation: fadeIn ease 20s;
+  -o-animation: fadeIn ease 20s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.vertical-center {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100%; // Fallback for browsers do NOT support vh unit
+  min-height: 100vh; //. These two lines are counted as one :-)
+
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  align-items: center;
+}
+
+// Navigation Styling
+
+nav {
+  background-color: rgba(0,0,0,0.8);
+  margin: 0;
+
+  span {
+    -webkit-transition: .3s ease-in;
+    transition: .3s ease-in;
+  }
+
+  li {
+    margin-top: 5px;
+  }
+
+  .nav-link {
+    display: inline;
+  }
+
+  .nav-item {
+    padding: 5px;
+  }
+
+}
+
+/*
+Bootstrap 4 breakpoints
+*/
+
+/*
+Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+@media screen and (orientation: portrait) {
+
+}
+
+@media screen and (orientation: landscape) {
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 300px) {
+
+  .section {
+    margin: 40px 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+// Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint
+@media (min-width: 768px) {
+  nav {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+
+    .navbar-nav {
+      margin: 0 auto;
+      position: relative;
+      top: 25px
+    }
+
+    .nav-item {
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .nav-link {
+      display: block;
+      z-index: 150;
+    }
+
+    span {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 5px;
+      display: block;
+      opacity: 0;
+      padding: 0;
+      position: relative;
+      top: 20px;
+    }
+
+    a:hover span {
+      opacity: 100;
+    }
+
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  .section {
+    margin: 40px 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
+
+@media(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  /* Retina-specific stuff here */
+
+  h1 {
+    font-size: 28px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .section {
+    margin: 40px 5%;
+    padding: 20px 20px;
+  }
+}
